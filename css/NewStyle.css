@@ -1479,6 +1479,98 @@ textarea.input100 {
 * TESTIMONIALS END
 * ==========================================
 */
+/*
+* ==========================================
+* JOURNEY START
+* ==========================================
+*/
+.our-journey-steps {
+    width: 100%;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.jouery-leaf-block {
+    width: calc(100% - 160px);
+}
+
+.our-journey-steps:nth-child(odd) .our-journey-scroll-block {
+    text-align: right;
+    position: relative;
+    float: left;
+    margin-top: 13px;
+}
+
+.our-journey-scroll-block:first-child {
+    margin-left: 0;
+}
+
+.our-journey-scroll-block {
+    min-width: 200px;
+}
+
+.our-journey-steps:nth-child(2n) .our-journey-scroll-block:nth-child(odd) .steps-jour,
+.our-journey-steps:nth-child(odd) .our-journey-scroll-block:nth-child(odd) .steps-jour {
+    background-image: url(../img/Journey/pan-1.jpg) !important;
+}
+
+.our-journey-scroll-block .steps-jour {
+    width: 200px;
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/Journey/pan.jpg) !important;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.our-journey-steps:nth-child(odd) .our-journey-scroll-block .steps-jour h3 {
+    position: absolute;
+    bottom: -67px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.our-journey-steps:nth-child(2n) .our-journey-scroll-block .steps-jour h3 {
+    position: absolute;
+    top: -67px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.our-journey-steps:nth-child(2n) .our-journey-scroll-block {
+    float: right;
+    position: relative;
+    margin-top: 36px;
+    left: 96px;
+}
+.steps-jour h3 {
+    margin-bottom: 10px;
+    color: #283895;
+    font-size: 23px;
+    line-height: 33px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.steps-jour h3, .steps-jour h4 {
+    font-family: sofia-pro,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.steps-jour p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0;
+    padding: 0 25px;
+}
+/*
+* ==========================================
+* JOURNEY END
+* ==========================================
+*/
 
 
 
