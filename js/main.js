@@ -4,6 +4,8 @@
         $('.page-loader').fadeOut(500)
     })
 
+    new WOW().init();
+
     $('.testimonial-area').owlCarousel({
         loop: true,
         margin: 10,
@@ -142,6 +144,23 @@
         }, 100)
     });
     // go to top end
+
+    // data table
+    $('#guest-table').DataTable({
+        "scrollX": true,
+        'columnDefs': [{
+            'targets': 0,
+            'checkboxes': {
+                'selectRow': true
+            }
+        }],
+        'select': {
+            'style': 'multi'
+        },
+        'order': [
+            [1, 'asc']
+        ]
+    });
 
     // End of use strict
 

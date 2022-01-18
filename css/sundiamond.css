@@ -71,3 +71,254 @@
     text-align: center;
     margin-top: 10px;
 }
+
+
+/* guest form */
+
+
+/* common classes */
+
+.sd-flex {
+    display: flex;
+}
+
+.sd-align-center {
+    align-items: center;
+}
+
+.sd-content-end {
+    justify-content: flex-end;
+}
+
+.sd-mr-10 {
+    margin-right: 10px;
+}
+
+.sd-input {
+    border: 1px solid #000;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+}
+
+.sd-input:focus {
+    border-color: #000 !important;
+}
+
+.sd-textarea {
+    border: 1px solid #000;
+    padding: 5px;
+    resize: vertical;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.sd-textarea:focus {
+    border-color: #000 !important;
+}
+
+
+/* common classes */
+
+.staticMenu {
+    background-color: #000B49;
+}
+
+
+/* form css start */
+
+.sd-guest-form {
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 30px;
+}
+
+.sd-guest-form-maintitle {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.sd-guest-form-label {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.sd-guest-form-row {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 5px 15px;
+}
+
+.sd-guest-form-buttons {
+    text-align: right;
+}
+
+.sd-guest-form-btn {
+    border-radius: 100px;
+    padding: 5px 15px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.sd-guest-form-btn:hover {
+    color: #fff;
+}
+
+.sd-guest-form-btn.sd-guest-form-reset {
+    background: #f9b000;
+}
+
+.sd-guest-form-btn.sd-guest-form-reset:hover {
+    background: #000B49;
+}
+
+.sd-guest-form-btn.sd-guest-form-search {
+    background: #000B49;
+}
+
+.sd-guest-form-btn.sd-guest-form-search:hover {
+    background: #f9b000;
+}
+
+
+/* guest table */
+
+.guest-table .dataTables_wrapper {
+    padding-bottom: 15px;
+}
+
+.guest-table .dataTable thead th {
+    color: #323232;
+    background: #f6f6f6;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(189, 195, 199, 0.5);
+    border-right: 1px solid rgba(189, 195, 199, 0.5);
+    border-bottom: 1px solid rgba(189, 195, 199, 0.5);
+}
+
+.guest-table .dataTable tbody td {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #000;
+    white-space: nowrap;
+    padding: 5px 15px;
+    border-top: 1px solid rgba(189, 195, 199, 0.5);
+    border-right: 1px solid rgba(189, 195, 199, 0.5);
+    border-bottom: 0;
+}
+
+.dataTables_scroll,
+.guest-table .dataTables_length,
+.guest-table .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.sd-table-available-status {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #3f840f;
+    color: white;
+    margin: auto;
+}
+
+.sd-table-business-process {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00BCD4;
+    color: white;
+    margin: auto;
+}
+
+.sd-status-title {
+    justify-content: flex-end;
+    padding: 10px 15px;
+}
+
+.sd-status-title p {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.sd-status-title span {
+    margin-right: 10px;
+}
+
+
+/* Stone Details page */
+
+.sd-text-red {
+    color: #f56954!important;
+}
+
+.stone-details {}
+
+.sd-stone-btn {
+    padding: 5px 10px;
+    display: inline-block;
+    background: #3d4392;
+    border: 1px solid #3d4392;
+    border-radius: 5px;
+    min-width: 100px;
+    text-align: center;
+    color: #fff;
+    transition: 0.25s ease all;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.sd-stone-btn-white,
+.sd-stone-btn:hover {
+    background: #fff;
+    color: #3d4392;
+}
+
+.sd-stone-btn-white:hover {
+    background: #3d4392;
+    color: #fff;
+}
+
+.sd-stone-id-section {}
+
+.sd-stone-details-table {
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid rgba(0, 61, 102, 0.1);
+}
+
+.sd-stone-details-table td {
+    width: 50%;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 61, 102, 0.1);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.sd-table-title {
+    color: #000;
+}
+
+.sd-table-detail {
+    color: #3d4392;
+}
+
+.sd-stone-id-iframe {}
