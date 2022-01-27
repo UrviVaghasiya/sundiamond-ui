@@ -74,12 +74,13 @@
 
 .logo {
     margin-top: 0;
-    max-width:225px;
+    max-width: 225px;
 }
 
-header .navbar-nav > li {
+header .navbar-nav>li {
     margin-top: 28px;
 }
+
 p.colorfullText {
     color: #fab000;
     letter-spacing: 2px;
@@ -389,6 +390,10 @@ iframe {
 
 footer.footer-area {
     background-color: #000B49;
+}
+
+.sd-footer-logo img {
+    filter: brightness(0) invert(1);
 }
 
 .main-footer {
@@ -720,7 +725,7 @@ li.address-section .fa {
 .about-me__text p {
     margin-bottom: 35px;
     line-height: 24px;
-    color: #c18f59;
+    color: #fff;
 }
 
 .about-me__text p span {
@@ -1233,10 +1238,10 @@ textarea.input100 {
 */
 
 .navbar.active {
-    background: #000B49;
+    background: #fff;
     border-radius: 0px;
     padding-bottom: 10px;
-    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    /* box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1); */
 }
 
 #navbarResponsive {
@@ -1255,7 +1260,7 @@ textarea.input100 {
 }
 
 .navbar .nav-link {
-    color: #fff !important;
+    color: #000B49 !important;
     font-family: Nunito-Bold;
     text-transform: capitalize;
     font-size: 17px;
@@ -1395,9 +1400,6 @@ textarea.input100 {
 }
 
 #section4 {
-    padding-top: 30px;
-    min-height: 450px;
-    background: transparent;
     margin: 75px 0;
 }
 
@@ -1412,9 +1414,8 @@ textarea.input100 {
 }
 
 #section4 h2 {
-    font-size: 70px;
-    font-family: 'Righteous';
-    color: #ffffff;
+    font-size: px;
+    color: #000B49;
     line-height: 1;
     text-align: center;
     margin-top: 20px;

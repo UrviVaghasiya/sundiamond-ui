@@ -146,22 +146,100 @@
     // go to top end
 
     // data table
-    $('#guest-table').DataTable({
-        "scrollX": true,
-        'columnDefs': [{
-            'targets': 0,
-            'checkboxes': {
-                'selectRow': true
-            }
-        }],
-        'select': {
-            'style': 'multi'
-        },
-        'order': [
-            [1, 'asc']
-        ]
+    if ($('#guest-table').length) {
+        $('#guest-table').DataTable({
+            "scrollX": true,
+            'columnDefs': [{
+                'targets': 0,
+                'checkboxes': {
+                    'selectRow': true
+                }
+            }],
+            'select': {
+                'style': 'multi'
+            },
+            'order': [
+                [1, 'asc']
+            ]
+        });
+    }
+
+
+    // range picker sliders
+    // https://api.jqueryui.com/slider/#option-animate, https://api.jquerymobile.com/rangeslider/#option-trackTheme
+    // cut range
+    $("#sd-cut-slider").slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [25, 75],
+        step: 25,
+        slide: function(e, ui) {
+            console.log('>>>>>>>>>>>> ', e, ui.value);
+        }
+    });
+    // cut range
+    $("#sd-color-slider").slider({
+        range: true,
+        min: 0,
+        max: 100,
+        values: [0, 100],
+        step: 10,
+        slide: function(e, ui) {
+            console.log('>>>>>>>>>>>> ', e, ui.value);
+        }
+    });
+    // carat range
+    $("#sd-carat-slider").slider({
+        range: true,
+        min: 0.05,
+        max: 30,
+        values: [0.05, 30],
+        slide: function(e, ui) {
+            console.log('>>>>>>>>>>>> ', e, ui.value);
+        }
+    });
+    // carat range
+    $("#sd-clarity-slider").slider({
+        range: true,
+        min: 0,
+        max: 100,
+        step: (100 / 9),
+        values: [0, 100],
+        slide: function(e, ui) {
+            console.log('>>>>>>>>>>>> ', e, ui.value);
+        }
+    });
+    // price range
+    $("#sd-price-slider").slider({
+        range: true,
+        min: 200,
+        max: 5000,
+        values: [200, 5000],
+        slide: function(e, ui) {
+            console.log('>>>>>>>>>>>> ', e, ui.value);
+        }
     });
 
+    $('[rel="popover"]').popover({
+        container: 'body',
+        html: true,
+        placement: 'bottom',
+        content: function() {
+            var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+            return clone;
+        }
+    }).click(function(e) {
+        e.preventDefault();
+    })
+    $('body').on('click', function(e) {
+        $('[rel=popover]').each(function() {
+            // hide any open popovers when the anywhere else in the body is clicked
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
     // End of use strict
 
 })(jQuery);

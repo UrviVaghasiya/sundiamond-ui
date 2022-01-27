@@ -525,3 +525,155 @@ table {
     padding-top: 3rem!important;
     padding-bottom: 3rem!important;
 }
+
+
+/* custom checkbox */
+
+.sd-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.sd-checkbox+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sd-checkbox+label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 24px;
+    height: 24px;
+    background: white;
+}
+
+.sd-checkbox:hover+label:before {
+    background: #f35429;
+}
+
+.sd-checkbox:focus+label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.sd-checkbox:checked+label:before {
+    background: #f35429;
+}
+
+.sd-checkbox:disabled+label {
+    color: #b8b8b8;
+    cursor: auto;
+}
+
+.sd-checkbox:disabled+label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+
+.sd-checkbox:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+}
+
+
+/* range slider */
+
+.sd-range-slider {
+    width: calc(100% - 20px);
+}
+
+.sd-range-slider-steps {
+    display: flex;
+    /* text-align: center; */
+    margin-top: 15px;
+}
+
+.sd-range-slider-steps span {
+    font-size: 14px;
+    line-height: 16px;
+    flex: 1 1 0;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ui-slider {
+    margin-top: 20px;
+    height: 7px;
+    position: relative;
+    border: none;
+    background: #ff5b63;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    background: #ff5b63;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid #fff;
+    position: absolute;
+    top: -10px;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    background: #e9ecf1
+}
+
+.ui-slider-horizontal {
+    height: 5px !important;
+    border: 0 !important;
+    background: #9e9fa0 !important;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -8px !important;
+    margin-left: 0 !important;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    background: #000B49 !important;
+}
+
+
+/* input type number */
+
+.sd-input-number[type="number"] {
+    position: relative;
+    border: 1px solid !important;
+}
+
+.sd-input-number:after,
+.sd-input-number:before {
+    position: absolute;
+    right: 5px;
+    width: 1.6em;
+    height: .9em;
+    font-size: 10px;
+    pointer-events: none;
+    background: #fff;
+}
+
+.sd-input-number:after {
+    color: blue;
+    content: "\25B2";
+    margin-top: 1px;
+}
+
+.sd-input-number:before {
+    color: red;
+    content: "\25BC";
+    margin-bottom: 5px;
+    bottom: -.5em;
+}

@@ -7,6 +7,7 @@
     <title>Sun Diamond - Guest Search</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fonts/ja-font.woff">
     <!-- Place favicon.ico in the root directory -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/dataTables.checkboxes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
+    <!-- load from local -->
     <link rel="stylesheet" href="css/sundiamond.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -136,6 +139,250 @@
         </div>
     </header>
     <!-- Header Area End -->
+
+    <section class="sd-search-form contact section-padding">
+        <div class="container">
+            <div class="sd-search-form-inner">
+                <!-- Shape & Cut -->
+                <div class="row">
+                    <!-- Shape -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Shape</h2>
+                            <ul class="sd-diamond-icons">
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-round"></span>
+                                    <p class="sd-diamond-icon-title">Round</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-princess"></span>
+                                    <p class="sd-diamond-icon-title">Princess</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-cushion"></span>
+                                    <p class="sd-diamond-icon-title">Cushion</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-emerald"></span>
+                                    <p class="sd-diamond-icon-title">Emerald</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-oval"></span>
+                                    <p class="sd-diamond-icon-title">Oval</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-radiant"></span>
+                                    <p class="sd-diamond-icon-title">Radiant</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-asscher"></span>
+                                    <p class="sd-diamond-icon-title">Asscher</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-marquise"></span>
+                                    <p class="sd-diamond-icon-title">Marquise</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-heart"></span>
+                                    <p class="sd-diamond-icon-title">Heart</p>
+                                </li>
+                                <li class="sd-diamond-icon-inner">
+                                    <span class="icon-pear"></span>
+                                    <p class="sd-diamond-icon-title">Pear</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Cut -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Cut</h2>
+                            <div class="sd-range-slider">
+                                <div id="sd-cut-slider" class="sd-range-slider-inner" name="sd-cut-range-input"></div>
+                                <div class="sd-range-slider-steps">
+                                    <span>Good</span>
+                                    <span>Very Good</span>
+                                    <span>Ideal</span>
+                                    <span>True Hearts</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color & Carat -->
+                <div class="row">
+                    <!-- Color -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Color</h2>
+                            <div class="sd-range-slider">
+                                <div id="sd-color-slider" class="sd-range-slider-inner" name="sd-cut-range-input"></div>
+                                <div class="sd-range-slider-steps">
+                                    <span>M</span>
+                                    <span>L</span>
+                                    <span>K</span>
+                                    <span>J</span>
+                                    <span>I</span>
+                                    <span>H</span>
+                                    <span>G</span>
+                                    <span>F</span>
+                                    <span>E</span>
+                                    <span>D</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carat -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Car at</h2>
+                            <div class="sd-range-slider">
+                                <div id="sd-carat-slider" class="sd-range-slider-inner" name="sd-carat-range-input"></div>
+                                <div class="sd-range-slider-steps">
+                                    <input class="sd-input-number" type="number" min="0.05" max="30.00" placeholder="0.05" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clarity & Price -->
+                <div class="row">
+                    <!-- Clarity -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Clarity</h2>
+                            <div class="sd-range-slider">
+                                <div id="sd-clarity-slider" class="sd-range-slider-inner" name="sd-clarity-range-input"></div>
+                                <div class="sd-range-slider-steps">
+                                    <span>I1</span>
+                                    <span>SI2</span>
+                                    <span>SI1</span>
+                                    <span>VS2</span>
+                                    <span>VS1</span>
+                                    <span>VVS2</span>
+                                    <span>VVS1</span>
+                                    <span>IF</span>
+                                    <span>FL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Price -->
+                    <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Price</h2>
+                            <div class="sd-range-slider">
+                                <div id="sd-price-slider" class="sd-range-slider-inner" name="sd-price-range-input"></div>
+                                <div class="sd-range-slider-steps">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advance fiilter -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="">
+                            <h2 class="sd-search-form-title mb-2">Advanced Options</h2>
+                            <div class="sd-advance-filter">
+                                <!-- polish filter -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-polish">Polish</a>
+                                    <div id="sd-polish" class="hide">
+                                        <ul class="sd-popover-inner">
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-excellent" type="checkbox" value="" checked>
+                                                <label for="sd-polish-excellent">Excellent</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-verygood" type="checkbox" value="" checked>
+                                                <label for="sd-polish-verygood">Very Good</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-good" type="checkbox" value="" checked>
+                                                <label for="sd-polish-good">Good</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Symmentry -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-symmentry">Symmentry</a>
+                                    <div id="sd-symmentry" class="hide">
+                                        <ul class="sd-popover-inner">
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-excellent" type="checkbox" value="" checked>
+                                                <label for="sd-polish-excellent">Excellent</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-verygood" type="checkbox" value="" checked>
+                                                <label for="sd-polish-verygood">Very Good</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-good" type="checkbox" value="" checked>
+                                                <label for="sd-polish-good">Good</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- lab -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-lab">Lab</a>
+                                    <div id="sd-lab" class="hide">
+                                        <ul class="sd-popover-inner">
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-excellgiaent" type="checkbox" value="" checked>
+                                                <label for="sd-polish-gia">GIA</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-verygood" type="checkbox" value="" checked>
+                                                <label for="sd-polish-verygood">AGS</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-good" type="checkbox" value="" checked>
+                                                <label for="sd-polish-good">IGI</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Fluorescence -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-fluorescence">Fluorescence</a>
+                                    <div id="sd-fluorescence" class="hide">
+                                        <ul class="sd-popover-inner">
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-excellgiaent" type="checkbox" value="" checked>
+                                                <label for="sd-polish-gia">None</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-verygood" type="checkbox" value="" checked>
+                                                <label for="sd-polish-verygood">Faint</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-good" type="checkbox" value="" checked>
+                                                <label for="sd-polish-good">Medium</label>
+                                            </li>
+                                            <li>
+                                                <input class="sd-checkbox" id="sd-polish-good" type="checkbox" value="" checked>
+                                                <label for="sd-polish-good">Strong</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- https://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxpopover/jquery-popover-getting-started.htm -->
+
     <!-- guest search form start -->
     <section class="sd-guest-search-form contact section-padding">
         <div class="container">
@@ -472,7 +719,7 @@
                             <a class="" href="index.html"><img class="img-responsive" src="img/logo/logo_.png" alt="restorant" /></a>
                         </div>-->
                             <div class="col-xs-12 noPadding logo-text">
-                                <a class="" href="index.html">
+                                <a class="sd-footer-logo" href="index.html">
                                     <img class="img-responsive" src="img/logo/logo both laarge.png" alt="restorant">
                                 </a>
                             </div>
@@ -587,6 +834,7 @@
     <!-- Footer End -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/ajax-mail.js"></script>

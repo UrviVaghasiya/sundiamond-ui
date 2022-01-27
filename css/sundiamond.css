@@ -122,7 +122,7 @@
 /* common classes */
 
 .staticMenu {
-    background-color: #000B49;
+    background-color: #ffffff;
 }
 
 
@@ -322,3 +322,157 @@
 }
 
 .sd-stone-id-iframe {}
+
+
+/* new guest search form design */
+
+
+/* diamond icons */
+
+@font-face {
+    font-family: "JamesAllenFonts";
+    font-display: fallback;
+    src: url("https://ion.r2net.com/Images/Fonts/JAFonts/ja-font.eot");
+    src: url("https://ion.r2net.com/Images/Fonts/JAFonts/ja-font.eot") format("embedded-opentype"), url("https://ion.r2net.com/Images/Fonts/JAFonts/ja-font.woff") format("woff"), url("https://ion.r2net.com/Images/Fonts/JAFonts/ja-font.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+[class^=icon-]::before,
+[class*=" icon-"]::before {
+    font-family: "JamesAllenFonts";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-round:before {
+    content: "";
+}
+
+.icon-oval:before {
+    content: "";
+}
+
+.icon-princess:before {
+    content: ""
+}
+
+.icon-cushion:before {
+    content: ""
+}
+
+.icon-emerald:before {
+    content: ""
+}
+
+.icon-radiant:before {
+    content: ""
+}
+
+.icon-asscher:before {
+    content: ""
+}
+
+.icon-marquise:before {
+    content: "";
+}
+
+.icon-heart:before {
+    content: "";
+}
+
+.icon-pear:before {
+    content: "";
+}
+
+.sd-diamond-icons {
+    display: flex;
+    align-items: center;
+}
+
+
+/* search form */
+
+.sd-search-form {}
+
+.sd-search-form-title {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.sd-search-form-inner {
+    background: #FFF;
+    padding: 15px;
+}
+
+.sd-diamond-icons li {
+    list-style-type: none;
+    border: 1px solid #dfdfdf;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: border-color .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sd-diamond-icons li:hover {
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.sd-diamond-icons .sd-diamond-icon-inner p {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    top: -21px;
+    left: 0;
+    white-space: nowrap;
+    color: #656565;
+}
+
+.sd-diamond-icons li:hover p {
+    display: block;
+}
+
+.sd-diamond-icons .sd-diamond-icon-inner span {
+    font-size: 20px;
+}
+
+
+/* advanced filter */
+
+.sd-advance-filter {
+    display: flex;
+    align-items: center;
+}
+
+.sd-advance-filter-inner {
+    margin-right: 15px;
+}
+
+.sd-advance-filter-btn {
+    display: flex;
+    text-align: center;
+    cursor: default;
+    border: 1px solid #dfdfdf;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    min-width: auto;
+    padding: 6px 20px;
+    cursor: pointer;
+    text-decoration: unset !important;
+}
+
+.sd-popover-inner {}
+
+.sd-popover-inner li {
+    margin-bottom: 10px;
+}
