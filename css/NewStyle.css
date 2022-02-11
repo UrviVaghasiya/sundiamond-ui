@@ -63,9 +63,12 @@
     position: fixed;
     left: 0%;
     top: 0px;
-    z-index: 9;
-    padding-left: 10px;
+    z-index: 90;
     width: 100%;
+}
+
+.fixedArea .content-wrapper {
+    box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
 }
 
 .noPadding {
@@ -74,11 +77,11 @@
 
 .logo {
     margin-top: 0;
-    max-width: 225px;
+    max-width: 180px;
 }
 
 header .navbar-nav>li {
-    margin-top: 28px;
+    margin-top: 10px;
 }
 
 p.colorfullText {
@@ -156,11 +159,6 @@ input {
 textarea {
     outline: none;
     border: none;
-}
-
-textarea:focus,
-input:focus {
-    border-color: transparent !important;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -547,7 +545,7 @@ li.address-section .fa {
 
 .about-me-bckg {
     position: absolute;
-    background-image: url("../img/about-me-bckg.jpg");
+    background-image: url("../img/new/about-us-bg.jpeg");
     background-position: center;
     background-size: cover;
     height: 500px;
@@ -636,14 +634,22 @@ li.address-section .fa {
     padding: 8px;
     text-align: center;
     background-color: #fff;
+    box-shadow: 0px 1px 15px 14px rgba(25, 25, 25, 10%);
 }
 
 .portfolio-wrapper .portfolio__img {
     font-size: 0;
+    height: 100%;
 }
 
 .portfolio-wrapper .portfolio__img img {
     width: 100%;
+}
+
+.portfolio-wrapper .portfolio__img video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .portfolio-wrapper .portfolio__bottom {
@@ -723,7 +729,7 @@ li.address-section .fa {
 }
 
 .about-me__text p {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     line-height: 24px;
     color: #fff;
 }
@@ -817,21 +823,8 @@ li.address-section .fa {
     background: #f7f7f7;
 }
 
-.contact100-form {
-    margin-top: 50px;
-}
-
 .container-contact100 {
     width: 100%;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     padding: 15px;
     background: transparent;
     position: relative;
@@ -861,22 +854,10 @@ li.address-section .fa {
     opacity: 1;
 }
 
-.contact100-form-title {
-    margin-top: 50px;
-}
-
 .contact100-form {
     width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background: #fff;
-    padding: 100px;
-    padding-bottom: 68px;
+    padding: 50px;
 }
 
 .contact100-form-title h3 {
@@ -1011,6 +992,7 @@ textarea.input100 {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 75, 90, 0.5);
     -o-box-shadow: 0px 0px 10px 0px rgba(255, 75, 90, 0.5);
     -ms-box-shadow: 0px 0px 10px 0px rgba(255, 75, 90, 0.5);
+    margin: auto;
 }
 
 .contact100-form-btn i {
@@ -1249,10 +1231,11 @@ textarea.input100 {
 }
 
 .myNavBar {
-    background-color: #00000000;
+    background-color: #FFF;
     border-color: #e7e7e700;
     padding-bottom: 10px;
     padding-top: 10px;
+    margin-bottom: 0;
 }
 
 .navbar {

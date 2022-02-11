@@ -167,59 +167,99 @@
 
     // range picker sliders
     // https://api.jqueryui.com/slider/#option-animate, https://api.jquerymobile.com/rangeslider/#option-trackTheme
-    // cut range
-    $("#sd-cut-slider").slider({
-        range: true,
-        min: 0,
-        max: 100,
-        values: [25, 75],
-        step: 25,
-        slide: function(e, ui) {
-            console.log('>>>>>>>>>>>> ', e, ui.value);
-        }
-    });
-    // cut range
-    $("#sd-color-slider").slider({
-        range: true,
-        min: 0,
-        max: 100,
-        values: [0, 100],
-        step: 10,
-        slide: function(e, ui) {
-            console.log('>>>>>>>>>>>> ', e, ui.value);
-        }
-    });
-    // carat range
-    $("#sd-carat-slider").slider({
-        range: true,
-        min: 0.05,
-        max: 30,
-        values: [0.05, 30],
-        slide: function(e, ui) {
-            console.log('>>>>>>>>>>>> ', e, ui.value);
-        }
-    });
-    // carat range
-    $("#sd-clarity-slider").slider({
-        range: true,
-        min: 0,
-        max: 100,
-        step: (100 / 9),
-        values: [0, 100],
-        slide: function(e, ui) {
-            console.log('>>>>>>>>>>>> ', e, ui.value);
-        }
-    });
-    // price range
-    $("#sd-price-slider").slider({
-        range: true,
-        min: 200,
-        max: 5000,
-        values: [200, 5000],
-        slide: function(e, ui) {
-            console.log('>>>>>>>>>>>> ', e, ui.value);
-        }
-    });
+    if ($("#sd-cut-slider").length) {
+        // cut range
+        $("#sd-cut-slider").slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [25, 75],
+            step: 25,
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-color-slider").length) {
+        // cut range
+        $("#sd-color-slider").slider({
+            range: true,
+            min: 0,
+            max: 100,
+            values: [0, 100],
+            step: 10,
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-carat-slider").length) {
+        // carat range
+        $("#sd-carat-slider").slider({
+            range: true,
+            min: 0.05,
+            max: 30,
+            values: [0.05, 30],
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-clarity-slider").length) {
+        // clarity range
+        $("#sd-clarity-slider").slider({
+            range: true,
+            min: 0,
+            max: 100,
+            step: (100 / 9),
+            values: [0, 100],
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-price-slider").length) {
+        // price range
+        $("#sd-price-slider").slider({
+            range: true,
+            min: 200,
+            max: 5000,
+            values: [200, 5000],
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-depth-slider").length) {
+        // Depth slider advanced filter range
+        $("#sd-depth-slider").slider({
+            range: true,
+            min: 46,
+            max: 78,
+            values: [46, 78],
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
+
+    if ($("#sd-table-slider").length) {
+        // table slider advanced filter range
+        $("#sd-table-slider").slider({
+            range: true,
+            min: 52,
+            max: 80,
+            values: [52, 80],
+            slide: function(e, ui) {
+                console.log('>>>>>>>>>>>> ', e, ui.value);
+            }
+        });
+    }
 
     $('[rel="popover"]').popover({
         container: 'body',
@@ -232,6 +272,7 @@
     }).click(function(e) {
         e.preventDefault();
     })
+
     $('body').on('click', function(e) {
         $('[rel=popover]').each(function() {
             // hide any open popovers when the anywhere else in the body is clicked
@@ -240,6 +281,14 @@
             }
         });
     });
+
+    // advanced filters
+
+    $('.sd-plus-icon').click(function() {
+        $(this).toggleClass('expanded');
+        $(this).parents('.sd-advance-filter-section').find('.sd-advance-filter').toggleClass('sd-active')
+    })
+
     // End of use strict
 
 })(jQuery);

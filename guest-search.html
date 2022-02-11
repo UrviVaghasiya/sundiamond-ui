@@ -143,12 +143,20 @@
     <section class="sd-search-form contact section-padding">
         <div class="container">
             <div class="sd-search-form-inner">
+                <div class="row sd-guest-title mb-3">
+                    <div class="col-md-12 col-xs-12">
+                        <h5 class="sd-guest-form-maintitle">
+                            Search Diamond
+                        </h5>
+                    </div>
+                </div>
+
                 <!-- Shape & Cut -->
                 <div class="row">
                     <!-- Shape -->
                     <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
                         <div class="">
-                            <h2 class="sd-search-form-title mb-2">Shape</h2>
+                            <h2 class="sd-search-form-title mb-4">Shape</h2>
                             <ul class="sd-diamond-icons">
                                 <li class="sd-diamond-icon-inner">
                                     <span class="icon-round"></span>
@@ -236,11 +244,25 @@
                     <!-- Carat -->
                     <div class="col-md-6 col-sm-12 col-xs-12 mb-4">
                         <div class="">
-                            <h2 class="sd-search-form-title mb-2">Car at</h2>
+                            <h2 class="sd-search-form-title mb-2">Carat</h2>
                             <div class="sd-range-slider">
                                 <div id="sd-carat-slider" class="sd-range-slider-inner" name="sd-carat-range-input"></div>
                                 <div class="sd-range-slider-steps">
-                                    <input class="sd-input-number" type="number" min="0.05" max="30.00" placeholder="0.05" />
+                                    <div class="number-input">
+                                        <input class="quantity bg-light" step="0.01" min="0.05" max="30.00" placeholder="0" name="quantity" value="0.05" type="number">
+                                        <div class="number-input-buttons">
+                                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="number-input">
+                                        <input class="quantity bg-light" step="0.01" min="30" max="0.05" placeholder="0" name="quantity" value="30.00" type="number">
+                                        <div class="number-input-buttons">
+                                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                            <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +298,13 @@
                             <div class="sd-range-slider">
                                 <div id="sd-price-slider" class="sd-range-slider-inner" name="sd-price-range-input"></div>
                                 <div class="sd-range-slider-steps">
+                                    <div class="number-input">
+                                        <input class="quantity bg-light" min="200" max="50000" name="quantity" value="$200" type="tel">
+                                    </div>
 
+                                    <div class="number-input">
+                                        <input class="quantity bg-light" min="50000" max="200" name="quantity" value="$50000" type="tel">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -286,8 +314,8 @@
                 <!-- Advance fiilter -->
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="">
-                            <h2 class="sd-search-form-title mb-2">Advanced Options</h2>
+                        <div class="sd-advance-filter-section">
+                            <h2 class="sd-search-form-title mb-2">Advanced Options <span class="sd-plus-icon"></span></h2>
                             <div class="sd-advance-filter">
                                 <!-- polish filter -->
                                 <div class="sd-advance-filter-inner">
@@ -349,6 +377,42 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <!-- Depth(%) -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-depth">Depth(%)</a>
+                                    <div id="sd-depth" class="hide">
+                                        <div class="sd-range-slider">
+                                            <div id="sd-depth-slider" class="sd-range-slider-inner" name="sd-cut-range-input"></div>
+                                            <div class="sd-range-slider-steps">
+                                                <div class="number-input">
+                                                    <input class="quantity bg-light" min="46" max="78" name="quantity" value="46" type="tel">
+                                                </div>
+
+                                                <div class="number-input">
+                                                    <input class="quantity bg-light" min="78" max="46" name="quantity" value="78" type="tel">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Table -->
+                                <div class="sd-advance-filter-inner">
+                                    <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-table">Table</a>
+                                    <div id="sd-table" class="hide">
+                                        <div class="sd-range-slider">
+                                            <div id="sd-table-slider" class="sd-range-slider-inner" name="sd-cut-range-input"></div>
+                                            <div class="sd-range-slider-steps">
+                                                <div class="number-input">
+                                                    <input class="quantity bg-light" min="52" max="80" name="quantity" value="52" type="tel">
+                                                </div>
+
+                                                <div class="number-input">
+                                                    <input class="quantity bg-light" min="80" max="52" name="quantity" value="80" type="tel">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- Fluorescence -->
                                 <div class="sd-advance-filter-inner">
                                     <a href="#" rel="popover" class="sd-advance-filter-btn" data-popover-content="#sd-fluorescence">Fluorescence</a>
@@ -377,224 +441,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- https://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxpopover/jquery-popover-getting-started.htm -->
-
-    <!-- guest search form start -->
-    <section class="sd-guest-search-form contact section-padding">
-        <div class="container">
-            <div class="sd-guest-form">
-                <div class="row">
-                    <div class="col-md-2 col-xs-2">
-                        <h5 class="sd-guest-form-maintitle">
-                            Search Diamond
-                        </h5>
-                    </div>
-                    <div class="col-md-10 col-xs-10">
-
-                    </div>
-                </div>
-                <!-- Shape -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Shape:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Carat -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-2">
-                                <h3 class="sd-mr-2 sd-guest-form-label">Carat:</h3>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <input type="text" placeholder="From" class="sd-input sd-mr-10">
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <input type="text" placeholder="To" class="sd-input sd-mr-10">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Color -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Color:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Clarity -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Clarity:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cut, Milky & Location -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">cUT:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Milky:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Location:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Polish, Brown -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Polish:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Brown:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Lab, Symmetry & Status -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Lab:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Symmetry:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Status:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Fluorescence, BGM -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Fluorescence:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">BGM:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <a href="javascript:;" class="sd-stone-btn">Test 1</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Lab Number, Stone Number -->
-                <div class="row sd-guest-form-row">
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Lab Number:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="sd-textarea" rows="2" placeholder="Lab Number"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-8 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-8 col-xs-12">
-                                <h3 class="sd-guest-form-label">Stone Number:</h3>
-                            </div>
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <textarea class="sd-textarea" rows="2" placeholder="Stone Number"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reset & Search Butto -->
-                <div class="row sd-guest-form-row sd-guest-form-buttons">
+                <!-- ReSEt & Search -->
+                <div class="row sd-guest-form-row sd-guest-form-buttons mt-3">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <a href="jabascript:;" class="sd-guest-form-btn sd-guest-form-reset">
                             <i class="fa fa-refresh" aria-hidden="true"></i>
@@ -607,6 +456,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- https://www.jqwidgets.com/jquery-widgets-documentation/documentation/jqxpopover/jquery-popover-getting-started.htm -->
+
+    <!-- guest search form start -->
+    <section class="sd-guest-search-form contact">
+        <div class="container">
             <div class="sd-guest-form">
                 <div class="row mb-2 mt-2">
                     <div class="col-md-4">
@@ -716,8 +573,8 @@
                     <div class="single-widget pr-60">
                         <div class="footer-logo pb-25">
                             <!--<div class="col-md-4 noPadding text-center">
-                            <a class="" href="index.html"><img class="img-responsive" src="img/logo/logo_.png" alt="restorant" /></a>
-                        </div>-->
+                                <a class="" href="index.html"><img class="img-responsive" src="img/logo/logo_.png" alt="restorant" /></a>
+                            </div>-->
                             <div class="col-xs-12 noPadding logo-text">
                                 <a class="sd-footer-logo" href="index.html">
                                     <img class="img-responsive" src="img/logo/logo both laarge.png" alt="restorant">
@@ -752,58 +609,35 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d873.9975518928264!2d72.87346456403222!3d21.242694330584293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f36309627d7%3A0x30bf8ed6655d2aa0!2sShivant%20Antilla!5e1!3m2!1sen!2sin!4v1641705774121!5m2!1sen!2sin"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.0476021433974!2d72.81715971476696!3d21.229960885889636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12783e6097b78e2a!2zMjHCsDEzJzQ3LjkiTiA3MsKwNDknMDkuNyJF!5e0!3m2!1sen!2sin!4v1643539053105!5m2!1sen!2sin"
                         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="single-widget">
-                        <h3 class="sd-guest-form-label">get in touch</h3>
-                        <p class="lock"></p>
-                        <p>
-                            Your address goes here, Street
-                            <br> City, Roadno 785 New York
-                        </p>
-                        <p>
-                            <a href="tel:+919999999999">
-                                <span>+91 99999 9999</span>
-                            </a>
-                        </p>
-                        <p>
-                            <a href="tel:+919999999999">
-                                <span>+91 99999 9999</span>
-                            </a>
-                        </p>
+                        <h3>get in touch</h3>
+
+                        <div class="mb-3">
+                            <p>401, Prayosha Diamond, Sagar Industrial Society, Gujarat 395004</p>
+                            <p>
+                                <a href="tel:+918879046746">
+                                    <span>+91 88790 46746</span>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+91920663357">
+                                    <span>+91 9206 63357</span>
+                                </a>
+                            </p>
+                        </div>
                         <ul>
-                            <li class="address-section">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <i class="fa fa-address-card"></i>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                        <span>Primary:Lorem Ipsum Dolar Sıt</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="address-section">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <i class="fa fa-phone"></i>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                        <a href="tel:+919999999999">
-                                            <span>+91 99999 9999</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
                             <li class="address-section">
                                 <div class="row">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                         <i class="fa fa-envelope"></i>
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10 single-widget-description noPadding">
-                                        <a href="mailto:test@gmail.com">
-                                            <span>test@gmail.com</span>
+                                        <a href="mailto:sales.sundiam2013@gmail.com">
+                                            <span>sales.sundiam2013@gmail.com</span>
                                         </a>
                                     </div>
                                 </div>
@@ -817,8 +651,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <p class="text-center">
-                            Copyright ©
+                        <p class="text-center">Copyright ©
                             <a href="https://cemrethemes.com" target="_blank">Cemrethemes</a> 2020. All Right Reserved By Cemrethemes.
                         </p>
                     </div>
